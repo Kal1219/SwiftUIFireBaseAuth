@@ -53,6 +53,12 @@ class AppViewModel: ObservableObject
             }
         }
     }
+    func signOut()
+    {
+        try? auth.signOut()
+        
+        self.signedIn = false
+    }
 }
 
 struct ContentView: View {
@@ -64,7 +70,21 @@ struct ContentView: View {
         NavigationView {
             if viewModel.signedIn
             {
-                Text("Estas Registrado")
+                VStack
+                {
+                    Text("Estas Registrado")
+                    
+                    Button(action: {
+                        viewModel.signOut()
+                    }, label: {
+                        Text("Cerrar Sesión")
+                            .frame(width: 200, height: 50)
+                            .background(Color.red)
+                            .foregroundColor(Color.blue)
+                            .padding()
+                    })
+                }
+
             }
             else
             {
