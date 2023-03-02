@@ -79,8 +79,8 @@ struct ContentView: View {
                     }, label: {
                         Text("Cerrar Sesión")
                             .frame(width: 200, height: 50)
-                            .background(Color.red)
-                            .foregroundColor(Color.blue)
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
                             .padding()
                     })
                 }
@@ -138,7 +138,7 @@ struct SignInView: View {
                     viewModel.signIn(email: email, password: password)
                     
                 }, label: {
-                    Text("Registrarse")
+                    Text("Inicio de Sesión")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
                         .cornerRadius(8)
