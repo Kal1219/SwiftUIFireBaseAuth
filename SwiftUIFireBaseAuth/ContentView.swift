@@ -153,7 +153,7 @@ struct SignInView: View {
             
             Spacer()
         }
-        .navigationTitle("Sign in")
+        .navigationTitle("Iniciar Sesión")
     }
 }
 
